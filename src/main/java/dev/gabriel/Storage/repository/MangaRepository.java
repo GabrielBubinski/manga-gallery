@@ -5,3 +5,4 @@ import dev.gabriel.Storage.model.Manga;
 
 public interface MangaRepository extends JpaRepository<Manga,Long> {
 }
+

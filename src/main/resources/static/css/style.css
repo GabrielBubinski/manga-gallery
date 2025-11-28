@@ -1,7 +1,7 @@
+
  body {
      font-family: Arial, sans-serif;
      background: rgb(70, 70, 70);
-     padding: 20px;
  }
 
  .container {
@@ -16,6 +16,7 @@
      width: 220px;
      overflow: hidden;
      text-align: center;
+     
  }
 
  .card img {
@@ -28,13 +29,66 @@
      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
      color: white;
      font-weight: bold;
+     font-size: 18px;
+     
  }
 
- .card p {
-     color: #666;
-     margin-bottom: 10px;
- }
 
  .navbar {
      background: #333;
  }
+
+ header {
+    background-color: #1C1D21;
+    unicode-bidi: isolate;
+ }
+ 
+
+a {
+    cursor: pointer;
+}
+a.logo{
+    max-width: 110px;
+    max-height: 100px;
+    padding-left: 0px;
+}
+
+.logo {
+    height: auto;
+    margin: 10px;
+    padding-left: 10px;
+}
+.Image-logo {
+    height: 100px;
+    border-radius: 25px;
+}
+
+.container-logo {
+    margin: 0;
+    padding: 0;
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.menu-left {
+    display: flex;
+    align-items: center;
+}
+.site-header .navbar{
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+.custom-nav {
+    display: flex;
+    align-items: center;
+}
+
+.container-manga {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-left: 20px;
+    
+}
+

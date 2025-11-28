@@ -1,5 +1,10 @@
 package dev.gabriel.Storage.model;
 
+import java.time.Instant;
+
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -7,28 +12,33 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "manga_table")
-
+@Table(name = "tb_manga")
 public class Manga {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private String genero;
-    private Integer quantity;
+    private Integer quantCap;
     private String imageUrl;
 
-    // Construtores
+    @CreationTimestamp
+    public Instant creationTimeStamp;
+    @UpdateTimestamp
+    public Instant updateTimeStamp;
 
+
+    // Construtores
     public Manga() {
     }
 
-    public Manga(Long id, String name, String genero, Integer quantity) {
+    public Manga(Long id, String name, Integer quantCap, String imageUrl, Instant creationTimeStamp,Instant updateTimeStamp) {
         this.id = id;
         this.name = name;
-        this.genero = genero;
-        this.quantity = quantity;
+        this.quantCap = quantCap;
+        this.imageUrl = imageUrl;
+        this.creationTimeStamp = creationTimeStamp;
+        this.updateTimeStamp = updateTimeStamp;
     }
 
     // getters e setters
@@ -48,20 +58,12 @@ public class Manga {
         this.name = name;
     }
 
-    public String getGenero() {
-        return genero;
-    }
-
-    public void setGenero(String genero) {
-        this.genero = genero;
-    }
-
     public Integer getQuantity() {
-        return quantity;
+        return quantCap;
     }
 
-    public void setQuantity(Integer quantity) {
-        this.quantity = quantity;
+    public void setQuantity(Integer quantCap) {
+        this.quantCap = quantCap;
     }
 
     public String getImageUrl() {
@@ -71,5 +73,21 @@ public class Manga {
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
     }
+    public Instant getcreationTimeStamp() {
+        return creationTimeStamp;
+    }
+
+    public void setcreationTimeStamp(Instant creationTimeStamp) {
+        this.creationTimeStamp = creationTimeStamp;
+    }
+    public Instant getupdateTimeStamp() {
+        return updateTimeStamp;
+    }
+
+    public void setupdateTimeStamp(Instant updateTimeStamp) {
+        this.updateTimeStamp = updateTimeStamp;
+    }
 
 }
+
+

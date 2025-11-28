@@ -13,3 +13,16 @@ fetch('http://localhost:8080/manga')
             lista.appendChild(card);
         });
     });
+
+fetch('http://localhost:8080/logo')
+    .then(response => response.json())
+    .then(data => {
+        const logoContainer = document.getElementById('logo-container');
+        data.forEach(logoData => {
+            const logo = document.createElement('img');
+            logo.src = logoData.logoUrl;
+            logo.alt = 'Logo do site';
+            logo.className = 'Image-logo';
+            logoContainer.appendChild(logo);
+        });
+    });

@@ -9,21 +9,25 @@
 
 <body>
     <header class="site-header">
-    <div class="nav-bar">
-        <div class="nav-custom-width">
-            <div class="main-navigation">
+        <div class="nav-bar">
+            <div class="custom-nav">
                 <div class="menu-left">
-                    <a href="" class="nav-logo">MangaStore</a>
-
+                    <a class="logo" href="http://127.0.0.1:5500/src/main/resources/static/index.html"
+                        title="Save Manga">
+                        <ul class="container-logo" id="logo-container"></ul>
+                    </a>
                 </div>
-
+                <div class="menu-right">
+                </div>
             </div>
         </div>
-    
-    </div>
     </header>
 
-    <ul class="container" id="lista-mangas"></ul>
+    <div class="container-manga">
+        <div class="container-lista">
+            <ul class="container" id="lista-mangas"></ul>
+        </div>
+    </div>
 
     <script src="js/index.js"></script>
 </body>
@@ -32,5 +36,17 @@
 
 
 
-<!-- insert into manga_table(name,genero,quantity, image_url)
-values('Omniscient Reader','Aventura',300,'https://1drv.ms/u/c/68f483a189797c99/ET9PwspmJ5tGg4flwok3wO8Bxl6O3fiTtD17qYQDmwtpnw?e=4vQ1pG'); -->
+<!-- insert into tb_manga(name,quant_Cap, image_url)
+values('Omniscient Reader',300,'https://github.com/GabrielBubinski/manga-gallery/blob/main/src/main/resources/static/image/Omniscient-Reader-Anime-Teaser-Visual.webp?raw=true'); -->
+
+<!-- insert into tb_logo(name, logo_url)
+values ('Logo Save Mangá', 'https://github.com/GabrielBubinski/manga-gallery/blob/main/src/main/resources/static/image/LogoSaveManga.png?raw=true'); -->
+
+<!-- insert into tb_manga(name,quant_Cap, image_url)
+values('Eleceed',374,'https://github.com/GabrielBubinski/manga-gallery/blob/main/src/main/resources/static/image/Eleceed-capa.webp?raw=true'); -->
+
+<!-- insert into tb_manga(name,quant_Cap, image_url)
+values('Surviving The Game as a Barbarian',128,'https://github.com/GabrielBubinski/manga-gallery/blob/main/src/main/resources/static/image/SurvivalTheGameAsBarbarian-capa.jpg?raw=true'); -->
+
+<!-- insert into tb_manga(name,quant_Cap, image_url)
+values('The Regressed Mercenary’s Machinations',63,'https://github.com/GabrielBubinski/manga-gallery/blob/main/src/main/resources/static/image/RegressedMercenary%E2%80%99s-capa.webp?raw=true'); -->

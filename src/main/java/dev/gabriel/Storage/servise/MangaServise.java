@@ -11,14 +11,26 @@ public class MangaServise {
 
     private final MangaRepository mangaRepository;
 
-    public MangaServise(MangaRepository mangaRepository){
+    public MangaServise(MangaRepository mangaRepository) {
         this.mangaRepository = mangaRepository;
     }
 
-    //Listar
-    public List<Manga> getAll() {return mangaRepository.findAll();}
-    //Criar
-    public Manga save(Manga manga) {return mangaRepository.save(manga);}
-    //Deletar
-    public void delete(Long id){mangaRepository.deleteById(id);}
+    // Listar
+    public List<Manga> getAll() {
+        return mangaRepository.findAll();
+    }
+
+    // Criar
+    public Manga save(Manga manga) {
+        return mangaRepository.save(manga);
+    }
+
+    //Atualizar
+    public List<Manga> update(Manga manga) {mangaRepository.save(manga);
+        return getAll();}
+
+    // Deletar
+    public void delete(Long id) {
+        mangaRepository.deleteById(id);
+    }
 }
